@@ -25,3 +25,166 @@ body {
     text-wrap: balance;
   }
 }
+
+.grid-container {
+  position:absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 600px; /* Adjusted to account for borders */
+  margin: 100px;
+  margin-top: 85px;
+}
+
+button {
+  padding: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 8px; /* Rounded corners for a more modern look */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+button.selected {
+  background-color: #0070f3;
+  color: white;
+  border: 2px solid #005bb5;
+}
+
+.button:disabled {
+  background-color: #d3d3d3; /* Light gray background */
+  color: #8a8a8a; /* Dark gray text */
+  border: 1px solid #b0b0b0; /* Gray border */
+  cursor: not-allowed; /* Show 'not-allowed' cursor */
+  opacity: 0.6; /* Make the button appear faded */
+}
+
+.button:disabled:hover {
+  background-color: #d3d3d3; /* Ensure no hover effect when disabled */
+  color: #8a8a8a;
+}
+
+
+button:hover {
+  background-color: #0070f3; /* Blue background on hover */
+  color: white; /* Change text color to white */
+  transform: scale(1.05); /* Slightly scale the button on hover */
+  box-shadow: 0 4px 12px rgba(0, 118, 255, 0.3); /* Add a subtle shadow */
+}
+
+button:active {
+  transform: scale(0.95); /* Scale down slightly on click */
+  box-shadow: 0 2px 8px rgba(0, 118, 255, 0.2); /* Shadow changes on click */
+}
+
+button.correct {
+  background-color: #4caf50; /* Green background for correct syllables */
+  color: white; /* White text for visibility */
+}
+
+.puzzle {
+  position:absolute;
+  left:10px;
+  top:10px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-color:black;
+  border-left-color:black;
+  border-bottom-color:black;
+  border-right-color:black;
+}
+
+.swapbutton {
+  position:absolute;
+  top: 211px;
+  left: 800px;
+  width: 150px;
+}
+
+.undobutton {
+  position:absolute;
+  top: 337px;
+  left: 800px;
+  width: 150px;
+}
+
+.resetbutton {
+  position:absolute;
+  top: 463px;
+  left: 800px;
+  width: 150px;
+}
+
+.nummoves {
+  position:absolute;
+  top: 148px;
+  left: 800px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #0070f3;
+  background-color: #e0f7ff; /* Light blue background */
+  padding: 10px; /* Adds some padding around the text */
+  border-radius: 5px; /* Slight rounding of corners */
+  margin-bottom: 10px; /* Space below the moves label */
+  width: 11%; /* Full width */
+}
+
+.score {
+  position:absolute;
+  top: 86px;
+  left: 800px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  background-color: #e0f7ff; /* Light blue background */
+  padding: 10px; /* Adds some padding around the text */
+  border-radius: 5px; /* Slight rounding of corners */
+  margin-bottom: 10px; /* Space below the moves label */
+  width: 11%; /* Full width */
+}
+
+/* Style for Configuration 1 button */
+.config_1 {
+  background-color: white;
+  color: black;
+}
+
+/* Style for Configuration 2 button */
+.config_2 {
+  background-color: white;
+  color: black;
+}
+
+/* Style for Configuration 3 button */
+.config_3 {
+  background-color: white;
+  color: black;
+}
+
+/* Configs container to position the buttons on the right */
+.configs {
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  gap: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Ensures buttons align on the right side */
+}
+
+.victory-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
