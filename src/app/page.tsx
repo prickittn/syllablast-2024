@@ -1,7 +1,7 @@
 "use client"; // Mark this page as a client-side rendered page
 
 import React from 'react';
-import { Model, Syllable } from '../model'
+import { Model } from '../model'
 import { configuration_1, configuration_2, configuration_3 } from '../puzzle'
 
 export default function Home() {

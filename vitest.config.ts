@@ -6,6 +6,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     coverage: {
+      provider: 'v8',
       exclude: ['./*.config.*', './next-env.d.ts', './src/app/layout.tsx', './.next/**'],
     },
   },
